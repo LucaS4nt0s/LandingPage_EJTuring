@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "@tailwindcss/cli -i ./src/input.css -o ./src/main.css",
-    "watch": "@tailwindcss/cli -i ./src/input.css -o ./src/main.css --watch"
+    
   },
   "author": "",
   "license": "ISC",
