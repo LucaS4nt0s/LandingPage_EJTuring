@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@layer base {
+    * {
+      @apply p-0 m-0 box-border;
+    }
+}
+
+@theme {
+    --color-blue-main: #162E50;
+    --color-blue-light: #1A3A6F;
+
+    --font-principal: 'Inter', sans-serif;
+}
+
