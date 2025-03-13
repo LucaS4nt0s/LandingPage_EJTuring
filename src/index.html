@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="PT-BR" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +14,6 @@
     <a href="#home" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="../assets/preta_longa.png" class="block dark:hidden w-32 h-auto" alt="Ej Logo">
         <img src="../assets/logo_branca.png" class="hidden dark:block w-32 h-auto" alt="Ej Logo">
-
-        
     </a>
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
@@ -35,28 +33,28 @@
   </div>
   
     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <ul class="flex flex-col w-full text-center md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:justify-center md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <li class="flex items-center justify-center">
-          <a href="#home" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Inicio</a>
+            <a href="#home" class="text-center block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                Inicio
+            </a>
+        </li>        
+        <li class="flex items-center justify-center">
+          <a href="#sobre" class="text-center block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sobre</a>
         </li>
         <li class="flex items-center justify-center">
-          <a href="#sobre" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sobre</a>
+          <a href="#servicos" class="text-center block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Serviços</a>
         </li>
         <li class="flex items-center justify-center">
-          <a href="#servicos" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Serviços</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contato</a>
+            <a href="#" class="text-center block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contato</a>
         </li>
       </ul>
     </div>
-    </div>
   </nav>
 
-  <section class="mt-20 md:mt-18 lg:mt-13 bg-white dark:bg-gray-900 w-full md:h-[75dvh] " id="home">
+  <section class="mt-30 bg-white dark:bg-gray-900 w-full md:h-[75dvh] px-4" id="home">
     <div class="flex flex-col md:flex-row items-center text-gray-900 dark:text-white w-full mx-auto gap-10">
         
-        <!-- Texto -->
         <div class="flex flex-col justify-center w-full text-center md:text-left">
             <h1 class="leading-relaxed text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold">
                 Inovação e tecnologia para o seu negócio
@@ -66,24 +64,20 @@
             </p>
         </div>
 
-        <!-- Imagem -->
         <img class="block md:rounded-bl-2xl rounded-2xl w-[50%] sm:max-w-90 h-auto" src="../assets/computador.jpg" alt="mockup">
 
     </div>
    </section>
         
-    <section class="mt-10 bg-white dark:bg-gray-900 w-full h-[50dvh]" id="sobre">
-    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-        <div class="font-normal text-gray-900 sm:text-lg dark:text-gray-400">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Sobre nós</h2>
-            <p class="mb-4">A EJ Turing é uma Empresa Júnior formada por estudantes de Engenharia de Computação comprometidos em transformar tecnologia em soluções inovadoras. Nosso propósito é conectar o conhecimento acadêmico à prática, desenvolvendo projetos de impacto para empresas e empreendedores.
+    <section class="flex flex-col md:flex-row items-center justify-center mt-10 bg-white dark:bg-gray-900 w-full h-[50dvh] px-10" id="sobre">
+        <div class="flex flex-col items-center justify-center">
+            <h2 class="leading-relaxed text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold w-[50%]">Sobre nós</h2>
+            <p class="mt-10 w-[50%]">A EJ Turing é uma Empresa Júnior formada por estudantes de Engenharia de Computação comprometidos em transformar tecnologia em soluções inovadoras. Nosso propósito é conectar o conhecimento acadêmico à prática, desenvolvendo projetos de impacto para empresas e empreendedores.
             </p>
-            
         </div>
-        <div class="grid grid-cols-2 gap-4 mt-8">
-            <img class="w-full rounded-full" src="../assets/Fundo_Preto.png" alt="office content 1">
+        <div class="flex items-center justify-center w-full">
+            <img class="block max-w-100 max-h-100 rounded-full" src="../assets/Fundo_Preto.png" alt="office content 1">
         </div>
-    </div>
     </section>
 
     <section class="bg-white dark:bg-gray-900 " id="servicos">
