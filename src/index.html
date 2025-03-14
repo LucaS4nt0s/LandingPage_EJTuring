@@ -57,13 +57,13 @@
             <h1 class="leading-relaxed text-4xl w-full md:w-[40%] md:text-5xl lg:text-6xl font-bold">
                 Inovação e tecnologia para o seu negócio
             </h1>
-            <p class="mt-10 text-base sm:text-lg md:text-xl md:w-[60%] text-gray-200">
+            <p class="mt-10 text-base sm:text-lg md:text-xl md:w-[60%] text-gray-200 text-justify">
                 Do desenvolvimento de software à consultoria em TI, oferecemos soluções inteligentes para transformar sua empresa com tecnologia, inovação e conhecimento especializado. Nosso compromisso é fornecer serviços personalizados que atendem às necessidades específicas de cada cliente, ajudando a otimizar processos, aumentar a eficiência e impulsionar o crescimento. Trabalhamos com as mais recentes tecnologias para criar soluções inovadoras que resolvem desafios complexos e oferecem uma vantagem competitiva no mercado. Além disso, nossa equipe de profissionais altamente qualificados está sempre pronta para fornecer consultoria estratégica e suporte contínuo, garantindo que sua empresa esteja preparada para os desafios do futuro digital.
             </p>
         </div>
 
         <!-- Imagem de fundo -->
-        <div class="w-full h-84 md:h-100 overflow-hidden">
+        <div class="w-full h-84 md:h-120 overflow-hidden">
             <img src="../assets/computador.jpg" alt="Imagem de fundo" class="w-full h-full object-cover">
         </div>
 
@@ -71,14 +71,18 @@
     </div>
    </section>
         
-   <section class="flex flex-col md:flex-row items-center justify-between w-full h-[90dvh]" id="sobre">
+   <section class="flex flex-col lg:flex-row items-center justify-between w-full h-[140dvh] lg:h-[120dvh] md:h-[100dvh]" id="sobre">
   
     <!-- Texto -->
-    <div class="font-normal text-white w-full md:w-1/2 bg-black h-full flex items-center justify-center px-6">
+    <div class="font-normal text-white w-full xl:w-1/2 bg-black h-full flex items-center justify-center p-10 md:p-0">
       <div class="text-center">
-        <h2 class="leading-relaxed text-4xl w-full md:w-[40%] md:text-5xl lg:text-6xl font-bold">Sobre nós</h2>
-        <p class="mt-10 text-base sm:text-lg md:text-xl text-gray-200">
-          A EJ Turing é uma Empresa Júnior formada por estudantes de Engenharia de Computação comprometidos em transformar tecnologia em soluções inovadoras. Nosso propósito é conectar o conhecimento acadêmico à prática, desenvolvendo projetos de impacto para empresas e empreendedores.
+        <h2 class="leading-relaxed text-4xl w-full md:w-[40%] md:text-5xl font-bold">Sobre nós</h2>
+        <p class="mt-10 text-base sm:text-lg md:text-xl text-gray-200 text-justify px-8 pb-5 md:pb-0">
+            A EJ Turing é uma Empresa Júnior formada por estudantes do curso de Engenharia de Computação do Instituto Federal do Sul de Minas Gerais (IFSuldeMinas). Nosso time é composto por jovens talentos apaixonados por tecnologia e inovação, comprometidos em transformar conhecimento acadêmico em soluções reais e impactantes para o mercado.
+
+            Nosso propósito vai além do aprendizado teórico: buscamos conectar a ciência da computação e a engenharia de software à prática, desenvolvendo projetos personalizados que atendem às necessidades de empresas, startups e empreendedores. Através de metodologias modernas e do uso de tecnologias emergentes, entregamos soluções eficientes, inovadoras e alinhadas às demandas do mundo digital.
+            
+            Na EJ Turing, acreditamos que a experiência prática é essencial para a formação de profissionais altamente capacitados. Por isso, cada projeto desenvolvido por nossa equipe representa uma oportunidade de crescimento, experimentação e impacto, tanto para nossos membros quanto para nossos clientes. Se você busca uma equipe jovem, dedicada e preparada para transformar desafios em oportunidades, a EJ Turing está pronta para te ajudar!              
         </p>
       </div>
     </div>
@@ -158,6 +162,76 @@
     </div>
 </section>
 
+<section id="contato" class="bg-white text-black py-16 px-6 md:px-20 w-full">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+        <!-- Informações de contato -->
+        <div>
+            <h2 class="text-4xl font-bold mb-6 text-black">Entre em Contato</h2>
+            <p class="text-black mb-6">
+                Estamos prontos para ajudar! Envie sua mensagem ou entre em contato pelos canais abaixo.
+            </p>
+            
+            <!-- Informações -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-envelope text-primary-500 text-2xl"></i>
+                    <span>contato@ejturing.com</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-phone text-primary-500 text-2xl"></i>
+                    <span>+55 (XX) XXXX-XXXX</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-map-marker-alt text-primary-500 text-2xl"></i>
+                    <span>Rua Exemplo, 123, Cidade - Estado</span>
+                </div>
+            </div>
+
+            <!-- Redes sociais -->
+            <div class="mt-6 flex space-x-4">
+                <a href="https://www.instagram.com/ej_turing/" target="_blank" rel="noopener noreferrer" class="text-black hover:text-gray-700 text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/ej-turing-consultoria-e-desenvolvimento/" target="_blank" rel="noopener noreferrer" class="text-black hover:text-gray-700 text-2xl"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <!-- Formulário -->
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+            <form action="#inicio">
+                <div class="mb-4">
+                    <label class="block text-white mb-2">Nome</label>
+                    <input type="text" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white mb-2">E-mail</label>
+                    <input type="email" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-white mb-2">Mensagem</label>
+                    <textarea class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-green-500 hover:bg-primary-700 transition py-2 rounded-lg text-white font-bold">
+                    Enviar Mensagem
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<footer class="bg-gray-900 text-white py-6 text-center w-full border-t border-gray-600">
+    <div class="container mx-auto flex flex-col items-center">
+        <p class="text-sm">&copy; 2025 EJ Turing. Todos os direitos reservados.</p>
+        <div class="flex gap-4 mt-4 w-full items-center justify-center">
+            <img src="../assets/Fundo_Preto.png" alt="Logo EJ" class="w-12 h-auto">
+            <img src="../assets/logo_eng.svg" alt="Logo Engenharia" class="w-12 h-auto">
+            <img src="../assets/logo_if.svg" alt="Logo IF" class="w-8 h-auto">
+        </div>
+    </div>
+</footer>
 
 <script src="JS/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
