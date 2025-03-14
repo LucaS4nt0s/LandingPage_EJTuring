@@ -1,45 +1,27 @@
-var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
 
-// Change the icons inside the button based on previous settings
-if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    themeToggleLightIcon.classList.remove('hidden');
-} else {
-    themeToggleDarkIcon.classList.remove('hidden');
-}
+  const line1 = document.querySelector('.line1');
+  const line2 = document.querySelector('.line2');
+  const line3 = document.querySelector('.line3');
 
-var themeToggleBtn = document.getElementById('theme-toggle');
+  menuToggle.addEventListener('click', () => {
 
-themeToggleBtn.addEventListener('click', function() {
-
-    // toggle icons inside button
-    themeToggleDarkIcon.classList.toggle('hidden');
-    themeToggleLightIcon.classList.toggle('hidden');
-
-    // if set via local storage previously
-    if (localStorage.getItem('color-theme')) {
-        if (localStorage.getItem('color-theme') === 'light') {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('color-theme', 'dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('color-theme', 'light');
-        }
-
-    // if NOT set via local storage previously
-    } else {
-        if (document.documentElement.classList.contains('dark')) {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('color-theme', 'light');
-        } else {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('color-theme', 'dark');
-        }
-    }
-    
+    if (menuToggle.classList.contains('open')) {
+        // Volta ao hambúrguer
+        line1.style.transform = "translateY(0) rotate(0)";
+        line2.style.opacity = "1";
+        line3.style.transform = "translateY(0) rotate(0)";
+      } else {
+        // Transforma em "X"
+        line1.style.transform = "translateY(8px) rotate(45deg)";
+        line2.style.opacity = "0";
+        line3.style.transform = "translateY(-8px) rotate(-45deg)";
+      }
 });
 
-document.getElementById('menu-toggle').addEventListener('click', function() {
-    let menu = document.getElementById('menu');
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('open');
+    menu.classList.toggle('flex');
     menu.classList.toggle('hidden');
 });

@@ -3,140 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-    <script src="JS/head.js"></script>
     <link rel="stylesheet" href="main.css">
     <title>EJ Turing</title>
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
-    <header class="flex fixed top-0 bg-white dark:bg-gray-900 w-full h-16 items-center justify-around px-8 border-b border-gray-200 dark:border-gray-600">
+<body class="flex flex-col items-center justify-around min-h-screen bg-gray-900 text-white">
+    <header class="flex fixed top-0 bg-gray-900 w-full h-16 items-center justify-between px-8 border-b border-gray-600">
 
         <!-- Logo -->
         <a href="#"><img class="w-32 h-auto" src="../assets/logo_branca.png" alt="Logo da EJ Turing" ></a>
 
         <!-- Menu -->
         <nav  class="items-center h-16 px-6 hidden md:flex">
-            <ul id="menu" class="hidden md:flex md:justify-center md:items-center md:h-full font-principal text-base font-bold">
+            <ul class="hidden md:flex md:justify-center md:items-center md:h-full font-principal text-base font-bold">
                 <li class="h-full"><a href="#inicio" class="text-white px-6 h-full flex items-center hover:bg-blue-light">Inicio</a></li>
                 <li class="h-full"><a href="#sobre" class="text-white px-6 h-full flex items-center hover:bg-blue-light">Sobre</a></li>
                 <li class="h-full"><a href="#servicos" class=" text-white px-6 h-full flex items-center hover:bg-blue-light">Serviços</a></li>
                 <li class="h-full"><a href="#contato" class=" text-white px-6 h-full flex items-center hover:bg-blue-light">Contato</a></li>
             </ul>
         </nav>
+
+        <!-- Logos -->
+        <div class="flex items-center justify-around w-25">
+            <a href="http://portal.pcs.ifsuldeminas.edu.br/"><img class="w-6 h-auto hidden md:flex" src="../assets/logo_if.svg" alt="Logo do IF"></a>
+            <a href="https://portal.pcs.ifsuldeminas.edu.br/"><img class="w-10 h-auto hidden md:flex" src="../assets/logo_eng.svg" alt="Logo da Engenharia"></a>
+        </div>
        
-        <!-- Botões mudar tema -->
-        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                </svg>
-                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-                </svg>
-            </button>
-            <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                </svg>
-            </button>
+        <!-- Botão hamburguer (responsivo) -->
+        <button id="menu-toggle" class="relative flex flex-col items-center justify-around w-[24px] h-[24px] md:hidden focus:outline-none cursor-pointer transition-all">
+            <span class="line1 w-full h-[2px] bg-white rounded transition-all duration-300"></span>
+            <span class="line2 w-full h-[2px] bg-white rounded transition-all duration-300"></span>
+            <span class="line3 w-full h-[2px] bg-white rounded transition-all duration-300"></span>
+        </button>
         
-        
+
+        <!-- Menu mobile -->
+        <div class="md:hidden">
+            <div id="menu" class="absolute flex-col items-center hidden self-end  py-8 mt-10 space-y-6 font-bold bg-gray-900 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md text-white">
+                <a href="#inicio" class="mb-0 w-full text-center py-3 hover:bg-blue-light py-">Inicio</a>
+                <a href="#sobre" class="w-full text-center py-3 hover:bg-blue-light">Sobre</a>
+                <a href="#servicos" class="w-full text-center py-3 hover:bg-blue-light">Serviços</a>
+                <a href="#contato" class="w-full text-center py-3 hover:bg-blue-light">Contato</a>
+            </div>
         </div>
     </header>
 
-  <section class="mt-20 md:mt-18 lg:mt-13 bg-white dark:bg-gray-900 w-full md:h-[75dvh] " id="inicio">
-    <div class="flex flex-col md:flex-row items-center text-gray-900 dark:text-white w-full mx-auto gap-10 p-10">
+  <section class="mt-20 md:mt-18 lg:mt-13 bg-gray-900 w-full " id="inicio">
+    <div class="flex flex-col items-center text-white w-full mx-auto gap-10 pt-10">
         
         <!-- Texto -->
-        <div class="flex flex-col justify-center w-full text-center md:text-left">
-            <h1 class="leading-relaxed text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold">
+        <div class="flex flex-col justify-center items-center w-full text-center md:text-left px-10">
+            <h1 class="leading-relaxed text-4xl w-full md:w-[40%] md:text-5xl lg:text-6xl font-bold">
                 Inovação e tecnologia para o seu negócio
             </h1>
-            <p class="mt-10 text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300">
-                Do desenvolvimento de software à consultoria em TI, oferecemos soluções inteligentes para transformar sua empresa com tecnologia, inovação e conhecimento especializado.
+            <p class="mt-10 text-base sm:text-lg md:text-xl md:w-[60%] text-gray-200">
+                Do desenvolvimento de software à consultoria em TI, oferecemos soluções inteligentes para transformar sua empresa com tecnologia, inovação e conhecimento especializado. Nosso compromisso é fornecer serviços personalizados que atendem às necessidades específicas de cada cliente, ajudando a otimizar processos, aumentar a eficiência e impulsionar o crescimento. Trabalhamos com as mais recentes tecnologias para criar soluções inovadoras que resolvem desafios complexos e oferecem uma vantagem competitiva no mercado. Além disso, nossa equipe de profissionais altamente qualificados está sempre pronta para fornecer consultoria estratégica e suporte contínuo, garantindo que sua empresa esteja preparada para os desafios do futuro digital.
             </p>
         </div>
 
-        <!-- Imagem -->
-        <img class="block md:rounded-bl-2xl rounded-2xl w-[50%] sm:max-w-90 h-auto" src="../assets/computador.jpg" alt="mockup">
+        <!-- Imagem de fundo -->
+        <div class="w-full h-84 md:h-100 overflow-hidden">
+            <img src="../assets/computador.jpg" alt="Imagem de fundo" class="w-full h-full object-cover">
+        </div>
+
 
     </div>
    </section>
         
-    <section class="mt-10 bg-white dark:bg-gray-900 w-full h-[50dvh]" id="sobre">
-    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-        <div class="font-normal text-gray-900 sm:text-lg dark:text-gray-400">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Sobre nós</h2>
-            <p class="mb-4">A EJ Turing é uma Empresa Júnior formada por estudantes de Engenharia de Computação comprometidos em transformar tecnologia em soluções inovadoras. Nosso propósito é conectar o conhecimento acadêmico à prática, desenvolvendo projetos de impacto para empresas e empreendedores.
-            </p>
-            
+   <section class="flex flex-col md:flex-row items-center justify-between w-full h-[90dvh]" id="sobre">
+  
+    <!-- Texto -->
+    <div class="font-normal text-white w-full md:w-1/2 bg-black h-full flex items-center justify-center px-6">
+      <div class="text-center">
+        <h2 class="leading-relaxed text-4xl w-full md:w-[40%] md:text-5xl lg:text-6xl font-bold">Sobre nós</h2>
+        <p class="mt-10 text-base sm:text-lg md:text-xl text-gray-200">
+          A EJ Turing é uma Empresa Júnior formada por estudantes de Engenharia de Computação comprometidos em transformar tecnologia em soluções inovadoras. Nosso propósito é conectar o conhecimento acadêmico à prática, desenvolvendo projetos de impacto para empresas e empreendedores.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Imagens -->
+    <div class="w-full md:w-1/2 h-full flex justify-center items-center">
+      <img class="w-auto h-full object-cover" src="../assets/foto_computador.jpg" alt="Foto da equipe">
+    </div>
+    
+  </section>
+
+  <section class="bg-gray-900" id="servicos">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        
+        <!-- Título -->
+        <div class="mb-8 lg:mb-16 w-full">
+            <h2 class="leading-relaxed text-4xl w-full md:w-[100%] md:text-5xl lg:text-6xl font-bold text-center">Serviços Oferecidos</h2>
+            <p class="mt-10 text-base sm:text-lg md:text-xl text-gray-200 text-center">Oferecemos soluções personalizadas para atender às suas necessidades com qualidade e eficiência. Com uma equipe especializada e focada na excelência, garantimos um atendimento diferenciado para proporcionar os melhores resultados. Explore nossos serviços e descubra como podemos ajudar você ou sua empresa a alcançar seus objetivos.</p>
         </div>
-        <div class="grid grid-cols-2 gap-4 mt-8">
-            <img class="w-full rounded-full" src="../assets/Fundo_Preto.png" alt="office content 1">
+
+        <!-- Serviços -->
+        <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+            <!-- Serviço 1 -->
+            <div class="text-center">
+                <div class="mb-4">
+                    <i class="fas fa-laptop-code text-white text-4xl"></i>
+                </div>
+                <h3 class="mb-2 text-xl font-bold text-white">Desenvolvimento de Software</h3>
+                <p class="text-gray-400">Criação de sistemas sob medida e soluções de software prontas para diferentes necessidades.</p>
+            </div>
+
+            <!-- Serviço 2 -->
+            <div class="text-center">
+                <div class="mb-4">
+                    <i class="fas fa-headset text-white text-4xl"></i>
+                </div>
+                <h3 class="mb-2 text-xl font-bold text-white">Consultoria em TI</h3>
+                <p class="text-gray-400">Auxílio estratégico e técnico para otimização de processos e infraestrutura tecnológica.</p>
+            </div>
+
+            <!-- Serviço 3 -->
+            <div class="text-center">
+                <div class="mb-4">
+                    <i class="fas fa-tools text-white text-4xl"></i>
+                </div>
+                <h3 class="mb-2 text-xl font-bold text-white">Manutenção de Equipamentos</h3>
+                <p class="text-gray-400">Venda e reparo de hardware para garantir eficiência operacional.</p>
+            </div>
+
+            <!-- Serviço 4 -->
+            <div class="text-center">
+                <div class="mb-4">
+                    <i class="fas fa-cogs text-white text-4xl"></i>
+                </div>
+                <h3 class="mb-2 text-xl font-bold text-white">Fabricação de Hardware</h3>
+                <p class="text-gray-400">Desenvolvimento de componentes e dispositivos eletrônicos inovadores.</p>
+            </div>
+
+            <!-- Serviço 5 -->
+            <div class="text-center">
+                <div class="mb-4">
+                    <i class="fas fa-flask text-white text-4xl"></i>
+                </div>
+                <h3 class="mb-2 text-xl font-bold text-white">Pesquisa e Desenvolvimento</h3>
+                <p class="text-gray-400">Investigação e criação de novas tecnologias para impulsionar avanços no setor.</p>
+            </div>
+
+            <!-- Serviço 6 -->
+            <div class="text-center">
+                <div class="mb-4">
+                    <i class="fas fa-chalkboard-teacher text-white text-4xl"></i>
+                </div>
+                <h3 class="mb-2 text-xl font-bold text-white">Treinamento em TI</h3>
+                <p class="text-gray-400">Capacitação profissional para aprimoramento de habilidades e formação na área de tecnologia.</p>
+            </div>
         </div>
     </div>
-    </section>
-
-    <section class="bg-white dark:bg-gray-900 " id="servicos">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-            <div class="max-w-screen-md mb-8 lg:mb-16">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Serviços Oferecidos</h2>
-                <p class="text-gray-500 sm:text-xl dark:text-gray-400">Oferecemos soluções personalizadas para atender às suas necessidades com qualidade e eficiência. Com uma equipe especializada e focada na excelência, garantimos um atendimento diferenciado para proporcionar os melhores resultados. Explore nossos serviços e descubra como podemos ajudar você ou sua empresa a alcançar seus objetivos.</p>
-            </div>
-            <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-                <div>
-                    <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Desenvolvimento de Software Customizado e Não Customizado</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Criação de sistemas sob medida e soluções de software prontas para diferentes necessidades.</p>
-                </div>
-                <div>
-                    <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Consultoria e Suporte em Tecnologia da Informação</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Auxílio estratégico e técnico para otimização de processos e infraestrutura tecnológica.</p>
-                </div>
-                <div>
-                    <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path></svg>                    
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Comércio e Manutenção de Equipamentos de Informática</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Venda e reparo de hardware para garantir eficiência operacional.</p>
-                </div>
-                <div>
-                    <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Fabricação de Hardware e Equipamentos Eletrônicos</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Desenvolvimento de componentes e dispositivos eletrônicos inovadores.</p>
-                </div>
-                <div>
-                    <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Pesquisa e Desenvolvimento</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Investigação e criação de novas tecnologias para impulsionar avanços no setor.</p>
-                </div>
-                <div>
-                    <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Atividades de Serviços Relacionados à Tecnologia </h3>
-                    <p class="text-gray-500 dark:text-gray-400">Suporte técnico, integração de sistemas e outros serviços especializados.</p>
-                </div>
-                <div>
-                    <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Treinamento e Educação em TI </h3>
-                    <p class="text-gray-500 dark:text-gray-400"> Capacitação profissional para aprimoramento de habilidades e formação na área de tecnologia.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+</section>
 
 
 <script src="JS/script.js"></script>
