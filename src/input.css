@@ -9,7 +9,10 @@
 @theme {
     --color-blue-main: #162E50;
     --color-blue-light: #1A3A6F;
+    --color-yellow-main: #FFD700;
     
+    --translate-y-7: translateY(7px);
+    --translate-y-14: translateY(14px);
+
     --font-principal: 'Inter', sans-serif;
 }
-
