@@ -9,7 +9,6 @@
     --color-red-500: oklch(0.637 0.237 25.331);
     --color-green-500: oklch(0.723 0.219 149.579);
     --color-gray-200: oklch(0.928 0.006 264.531);
-    --color-gray-300: oklch(0.872 0.01 258.338);
     --color-gray-400: oklch(0.707 0.022 261.325);
     --color-gray-600: oklch(0.446 0.03 256.802);
     --color-gray-700: oklch(0.373 0.034 259.733);
@@ -58,10 +57,8 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
-    --color-blue-main: #162E50;
-    --color-blue-light: #1A3A6F;
-    --color-linkedin: #0077B7;
-    --color-instagram: #E4405F;
+    --color-black-main: #1A1A1A;
+    --color-white-light: #FFFCF2;
     --font-principal: 'Inter', sans-serif;
   }
 }
@@ -533,9 +530,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -1228,11 +1222,8 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
-  .bg-black {
-    background-color: var(--color-black);
-  }
-  .bg-blue-main {
-    background-color: var(--color-blue-main);
+  .bg-black-main {
+    background-color: var(--color-black-main);
   }
   .bg-gray-700 {
     background-color: var(--color-gray-700);
@@ -1257,6 +1248,9 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-white-light {
+    background-color: var(--color-white-light);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab;
@@ -1622,9 +1616,6 @@
   }
   .text-gray-200 {
     color: var(--color-gray-200);
-  }
-  .text-gray-300 {
-    color: var(--color-gray-300);
   }
   .text-gray-400 {
     color: var(--color-gray-400);
@@ -2085,31 +2076,10 @@
   .transform-view {
     transform-box: view-box;
   }
-  .hover\:bg-blue-light {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-blue-light);
-      }
-    }
-  }
   .hover\:text-gray-700 {
     &:hover {
       @media (hover: hover) {
         color: var(--color-gray-700);
-      }
-    }
-  }
-  .hover\:text-instagram {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-instagram);
-      }
-    }
-  }
-  .hover\:text-linkedin {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-linkedin);
       }
     }
   }
