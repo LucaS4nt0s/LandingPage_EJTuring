@@ -7,16 +7,10 @@
 }
 
 @theme {
-    --color-blue-main: #162E50;
-    --color-blue-light: #1A3A6F;
-    --color-yellow-main: #FFD700;
+    --color-black-main: #1A1A1A;
+    --color-white-light: #FFFCF2;
     --color-linkedin: #0077B7;
     --color-instagram: #E4405F;
-
-    --xl: 1280px;
-
-    --translate-y-7: translateY(7px);
-    --translate-y-14: translateY(14px);
 
     --font-principal: 'Inter', sans-serif;
 }

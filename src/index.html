@@ -6,9 +6,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="../assets/logo_ej.png" type="image/x-icon">
     <title>EJ Turing</title>
 </head>
-<body class="flex flex-col items-center justify-around min-h-screen bg-gray-900 text-white">
+<body class="scroll-smooth flex flex-col items-center justify-around min-h-screen bg-gray-900 text-white">
     <header class="flex fixed top-0 bg-gray-900 w-full h-16 items-center justify-between px-8 border-b border-gray-600">
 
         <!-- Logo -->
@@ -26,8 +27,8 @@
 
         <!-- Logos -->
         <div class="flex items-center justify-around w-25">
-            <a href="http://portal.pcs.ifsuldeminas.edu.br/"><img class="w-6 h-auto hidden md:flex" src="../assets/logo_if.svg" alt="Logo do IF"></a>
-            <a href="https://portal.pcs.ifsuldeminas.edu.br/"><img class="w-10 h-auto hidden md:flex" src="../assets/logo_eng.svg" alt="Logo da Engenharia"></a>
+            <a href="http://portal.pcs.ifsuldeminas.edu.br/" target="_blank" rel="noopener noreferrer"><img class="w-6 h-auto hidden md:flex" src="../assets/logo_if.svg" alt="Logo do IF"></a>
+            <a href="https://portal.pcs.ifsuldeminas.edu.br/" target="_blank" rel="noopener noreferrer"><img class="w-10 h-auto hidden md:flex" src="../assets/logo_eng.svg" alt="Logo da Engenharia"></a>
         </div>
        
         <!-- Botão hamburguer (responsivo) -->
@@ -74,14 +75,15 @@
    <section class="flex flex-col lg:flex-row items-center justify-between w-full h-[140dvh] lg:h-[120dvh] md:h-[100dvh]" id="sobre">
   
     <!-- Texto -->
-    <div class="font-normal text-white w-full xl:w-1/2 bg-black h-full flex items-center justify-center p-10 md:p-0">
+    <div class="font-normal text-white w-full xl:w-1/2 bg-black-main h-full flex items-center justify-center p-10 md:p-0">
       <div class="text-center">
         <h2 class="leading-relaxed text-4xl w-full md:w-[40%] md:text-5xl font-bold">Sobre nós</h2>
-        <p class="mt-10 text-base sm:text-lg md:text-xl text-gray-200 text-justify px-8 pb-5 md:pb-0">
-            A EJ Turing é uma Empresa Júnior formada por estudantes do curso de Engenharia de Computação do Instituto Federal do Sul de Minas Gerais (IFSuldeMinas). Nosso time é composto por jovens talentos apaixonados por tecnologia e inovação, comprometidos em transformar conhecimento acadêmico em soluções reais e impactantes para o mercado.
-
+        <p class="mt-10 text-base sm:text-lg md:text-xl text-white text-justify px-8 pb-5 md:pb-0">
+            A EJ Turing é uma Empresa Júnior formada por estudantes do curso de Engenharia de Computação do Instituto Federal do Sul de Minas Gerais (IFSuldeMinas). Nosso time é 
+            composto por jovens talentos apaixonados por tecnologia e inovação, comprometidos em transformar conhecimento acadêmico em soluções reais e impactantes para o mercado.
+            <br><br>
             Nosso propósito vai além do aprendizado teórico: buscamos conectar a ciência da computação e a engenharia de software à prática, desenvolvendo projetos personalizados que atendem às necessidades de empresas, startups e empreendedores. Através de metodologias modernas e do uso de tecnologias emergentes, entregamos soluções eficientes, inovadoras e alinhadas às demandas do mundo digital.
-            
+            <br><br>
             Na EJ Turing, acreditamos que a experiência prática é essencial para a formação de profissionais altamente capacitados. Por isso, cada projeto desenvolvido por nossa equipe representa uma oportunidade de crescimento, experimentação e impacto, tanto para nossos membros quanto para nossos clientes. Se você busca uma equipe jovem, dedicada e preparada para transformar desafios em oportunidades, a EJ Turing está pronta para te ajudar!              
         </p>
       </div>
@@ -162,7 +164,7 @@
     </div>
 </section>
 
-<section id="contato" class="bg-white text-black py-16 px-6 md:px-20 w-full">
+<section id="contato" class="bg-white-light text-black py-16 px-6 md:px-20 w-full">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         
         <!-- Informações de contato -->
@@ -223,6 +225,8 @@
 
 
 <footer class="bg-gray-900 text-white py-6 text-center w-full border-t border-gray-600">
+
+    <!-- Rodapé -->
     <div class="container mx-auto flex flex-col items-center">
         <p class="text-sm">&copy; 2025 EJ Turing. Todos os direitos reservados.</p>
         <div class="flex gap-4 mt-4 w-full items-center justify-center">
