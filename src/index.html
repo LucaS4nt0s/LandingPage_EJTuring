@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="config.js"></script>    
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="../assets/logo_ej.png" type="image/x-icon">
     <title>EJ Turing</title>
@@ -199,20 +201,20 @@
 
         <!-- Formulário -->
         <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-            <form action="#inicio">
+            <form id="contact-form" action="https://api.emailjs.com/api/v1.0/email/send-form" method="POST">
+
                 <div class="mb-4">
                     <label class="block text-white mb-2">Nome</label>
-                    <input type="text" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" required>
+                    <input type="text" id="name" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" required>
                 </div>
 
                 <div class="mb-4">
                     <label class="block text-white mb-2">E-mail</label>
-                    <input type="email" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" required>
+                    <input type="email" id="email" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" required>
                 </div>
-
                 <div class="mb-4">
                     <label class="block text-white mb-2">Mensagem</label>
-                    <textarea class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500" rows="4" required></textarea>
+                    <textarea id="message" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500" rows="4" required></textarea>
                 </div>
 
                 <button type="submit" class="w-full bg-green-500 hover:bg-primary-700 transition py-2 rounded-lg text-white font-bold">
@@ -220,6 +222,33 @@
                 </button>
             </form>
         </div>
+
+    <script type="text/javascript">
+            emailjs.init(EMAILJS_CONFIG.USER_ID);
+    
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+        
+                
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var message = document.getElementById('message').value;
+        
+        
+                emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, {
+                    name: name,
+                    email: email,
+                    message: message
+                })
+                .then(function(response) {
+                    console.log('Sucesso:', response);
+                    alert('Mensagem enviada com sucesso!');
+                }, function(error) {
+                    console.log('Erro:', error);
+                    alert('Ocorreu um erro. Tente novamente.');
+                });
+            });
+        </script>    
     </div>
 </section>
 

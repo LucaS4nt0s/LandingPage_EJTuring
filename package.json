@@ -2,13 +2,12 @@
   "name": "landingpage_ej",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    
-  },
+  "scripts": {},
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/cli": "^4.0.13",
     "tailwindcss": "^4.0.13"
   }
