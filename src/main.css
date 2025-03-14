@@ -57,6 +57,7 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --color-blue-light: #1E90FF;
     --color-black-main: #1A1A1A;
     --color-white-light: #FFFCF2;
     --font-principal: 'Inter', sans-serif;
@@ -2075,6 +2076,13 @@
   }
   .transform-view {
     transform-box: view-box;
+  }
+  .hover\:bg-blue-light {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-light);
+      }
+    }
   }
   .hover\:text-gray-700 {
     &:hover {
